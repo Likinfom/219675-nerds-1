@@ -5,66 +5,71 @@
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
-    <header class="main-header"></header>
-    <nav class=" main-navigation">
+    <header class="main-header">
+      <nav class=" main-navigation">
         <a href="index.html"><img src="img/nerds-logo.png" width="160" height="65" alt="https://nerds.ru"></a>
         <ul class="site-navigation">
           <li><a href="studio.html">Студия</a></li>
           <li><a href="clients.html">Клиенты</a></li>
-          <li><a>Магазин</a></li>
+          <li class="main-navigation-current">Магазин</li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <div class="user-block">
-        <a class="basket" href="#">Корзина</a>
-      </div>
-    </nav>
+          <a class="basket" href="#">Корзина</a>
+        </div>
+      </nav>
+    </header>
     <main class="container">
       <h1>Магазин готовых шаблонов</h1>
-      <aside class="left-sidebar">
-        <form action="#" method="get">
-          <fieldset class="price-items">
-            <legend>Стоимость</legend>
-            <label for="min-price">от</label>
-            <input class="min" type="text" id="min-price" name="min" value="0">
-            <label for="max-price">до</label>
-            <input class="max-value" type="text" id="max-price" name="max" value="15000">
-          </fieldset>
-          <fieldset class="grid-item">
-            <Legend>Сетка</Legend>
-            <label for="adaptive">Адаптивная</label>
-            <input type="radio" name="grid" id="adaptive" value="Адаптивная">
-            <label for="fixed">Фиксированная</label>
-            <input type="radio" name="fixed" id="fixed" value="Фиксированная">
-            <label for="fixed">Резиновая</label>
-            <input type="radio" name="rubber" id="rubber" value="Резиновая">
-          </fieldset>
-          <fieldset class="grid-item">
-            <Legend>Особенности</Legend>
-            <input type="checkbox" name="slider" id="slider" checked>
-            <label for="slider">Слайдер</label>
-            <input type="checkbox" name="advantage" id="advantage" value="" checked>
-            <label for="advantage">Блок приемуществ</label>
-            <input type="checkbox" name="news" id="news" checked>
-            <label for="news">Новости</label>
-            <input type="checkbox" name="gallery" id="gallery">
-            <label for="gallery">Галерея</label>
-            <input type="checkbox" name="basket" id="basket">
-            <label for="basket">Корзина</label>
-          </fieldset>
-          <button class="btn" type="submit">Показать</button>
-        </form>
-      </aside>
-      <div class="catalog-container">
+      <section class="filters">
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+        <aside class="left-sidebar">
+          <form action="#" method="get">
+            <fieldset class="fieldset">
+              <legend>Стоимость</legend>
+              <label for="min-price">от</label>
+              <input class="min" type="text" id="min-price" name="min" value="0">
+              <label for="max-price">до</label>
+              <input class="max-value" type="text" id="max-price" name="max" value="15000">
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend>Сетка</legend>
+              <label for="adaptive">Адаптивная</label>
+              <input type="radio" name="grid" id="adaptive" value="Адаптивная">
+              <label for="fixed">Фиксированная</label>
+              <input type="radio" name="fixed" id="fixed" value="Фиксированная">
+              <label for="fixed">Резиновая</label>
+              <input type="radio" name="rubber" id="rubber" value="Резиновая">
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend>Особенности</legend>
+              <input type="checkbox" name="slider" id="slider" checked>
+              <label for="slider">Слайдер</label>
+              <input type="checkbox" name="advantage" id="advantage" value="" checked>
+              <label for="advantage">Блок приемуществ</label>
+              <input type="checkbox" name="news" id="news" checked>
+              <label for="news">Новости</label>
+              <input type="checkbox" name="gallery" id="gallery">
+              <label for="gallery">Галерея</label>
+              <input type="checkbox" name="basket" id="basket">
+              <label for="basket">Корзина</label>
+            </fieldset>
+            <button class="btn" type="submit">Показать</button>
+          </form>
+        </aside>
+      </section>
+      <section class="catalog-container">
+        <h2 class="visually-hidden">Каталог</h2>
         <div class="sorting">
           <b class="title-items">Сортировать</b>
           <ul class="sorting-items">
-            <li class="price-item"><a href="#">По цене:</a></li>
-            <li class="type-item"><a href="#">По типу:</a></li>
-            <li class="title"><a href="#">По названию:</a></li>
+            <li class="price-item"><a href="#">По цене</a></li>
+            <li class="type-item"><a href="#">По типу</a></li>
+            <li class="title"><a href="#">По названию</a></li>
           </ul>
           <div class="arrow-sorting">
-            <a class="arrow-up" href="#"></a>
-            <a class="arrow-down" href="#"></a>
+            <a class="arrow-up" href="#"><span class="visualle hidden">По возрастанию</span></a>
+            <a class="arrow-down" href="#"><span class="visualle hidden">По убыванию</span></a>
           </div>
         </div>
         <div class="catalog-goods">
@@ -73,7 +78,7 @@
             <div class="good-buttons">
               <h2 class="good-title"><a href="#">Sedona</a></h2>
               <p class="good-description">Информационный сайт для туристов</p>
-              <a href="#" class="btn btn-red">9 990 РУБ.</a>
+              <button class="btn btn-red" type="submit">9 990 РУБ</button>
             </div>
           </article>
           <article class="good-item">
@@ -81,7 +86,7 @@
             <div class="good-buttons">
               <h2 class="good-title">Pink-app<a href="#"></a></h2>
               <p class="good-description">Продуктовый лендинг приложения для IOS и Android</p>
-              <a href="#" class="btn btn-red">9 990 РУБ.</a>
+              <button class="btn btn-red" type="submit">9 990 РУБ</button>
             </div>
           </article>
           <article class="good-item">
@@ -89,7 +94,7 @@
             <div class="good-buttons">
                <h2 class="good-title">Barbershop<a href="#"></a></h2>
                <p class="good-description">Сайт салона красоты. Для мужчин, да</p>
-               <a href="#" class="btn btn-red">9 990 РУБ.</a>
+               <button class="btn btn-red" type="submit">9 990 РУБ</button>
             </div>
           </article>
           <article class="good-item">
@@ -97,7 +102,7 @@
             <div class="good-buttons">
               <h2 class="good-title">Mishka<a href="#"></a></h2>
               <p class="good-description">Интернет-магазин вязанных игрушек</p>
-              <a href="#" class="btn btn-red">9 990 РУБ.</a>
+              <button class="btn btn-red" type="submit">9 990 РУБ</button>
             </div>
           </article>          
           <article class="good-item">
@@ -105,7 +110,7 @@
             <div class="good-buttons">
               <h2 class="good-title">A plus<a href="#"></a></h2>
               <p class="good-description">Лендинг курсов повышения квалификации</p>
-              <a href="#" class="btn btn-red">9 990 РУБ.</a>
+              <button class="btn btn-red" type="submit">9 990 РУБ</button>
             </div>
           </article>
           <article class="good-item">
@@ -113,11 +118,17 @@
             <div class="good-buttons">
               <h2 class="good-title">Кваст<a href="#"></a></h2>
               <p class="good-description">Промо-сайт производителя крафтового кваса</p>
-              <a href="#" class="btn btn-red">9 990 РУБ.</a>
+              <button class="btn btn-red" type="submit">9 990 РУБ</button>
             </div>
           </article>
+          <ul class="pagination-list">
+            <li class="pagination-item"><a href="#">1</a></li>
+            <li class="pagination-item pagination-item-current"><a>2</a></li>
+            <li class="pagination-item"><a href="#">3</a></li>
+            <li class="pagination-item"><a href="#">Следующая</a></li>
+          </ul>
         </div>
-      </div>
+      </section>
       <section class="map">
         <h4 class="visually-hidden">Карта</h4>
         <img src="img/map.jpg" alt="map">
@@ -149,6 +160,19 @@
           <p>Скидка 10% для дузей из соуиальных сетей</p>
         </div>  
       </footer>
+      <div class="modal" id="window">
+        <form class="modal" method="post">
+          <h2>Напишите нам</h2>
+          <label for="name-field">Ваше имя</label>
+          <input type="text" id="name-field" value="Представьтесь, Пожалуйста">
+          <label for="email-field">Ваш e-mail</label>
+          <input type="email" id="email-field" value="Для отправки ответа">
+          <label for="comment-field">Текст письма:</label>
+          <textarea name="comment" id="comment-field">В свободной форме</textarea>
+          <button class="btn" type="submit">Отправить</button> 
+          <span class="modal-close">x</span>
+        </form>
+      </div>
     </main>
   </body>
 </html>
