@@ -2,12 +2,15 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
     <header class="main-header">
-      <nav class=" main-navigation">
-        <img src="img/nerds-logo.png" width="160" height="65" alt="Логотип дизайн-студии Nerds" >
+      <nav class="main-navigation">
+        <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Nerds" >
         <ul class="site-navigation">
           <li><a href="studio.html">Студия</a></li>
           <li><a href="clients.html">Клиенты</a></li>
@@ -23,9 +26,12 @@
       <h1 class="visually-hidden">Дизайн-студия «Nerds»</h1>
       <div class="slider">
         <div class="slider-controls">
-          <i class="control-current"></i>
-          <i></i>
-          <i></i>
+          <label for="btn-1"></label>
+          <input type="radio" id="btn-1" name="toggle" checked>
+          <label for="btn-2"></label>
+          <input type="radio" id="btn-2" name="toggle">
+          <label for="btn-3"></label>
+          <input type="radio" id="btn-3" name="toggle">
         </div>
         <ul class="slides">
           <li class="slide-slide-content current">
@@ -81,18 +87,19 @@
         </div>
         <aside class="details">
           <img src="img/nerds-illustration.jpg" width="360" height="208" alt="https://nerds.ru">
-          <b>C 2004 года Любим точность во всем:</b>
-          <ul class="info-results">
-            <li class="result">
-              <span>146<sup>%</sup></span>Уровень самоотдачи
-            </li>
-            <li class="result">
-              <span>100<sup>%</sup></span>Соблюдение сроков
-            </li>
-            <li class="result">
-              <span>50<sup>%</sup></span>Минимальная предоплата
-            </li>
-          </ul>
+          <table class="info-results">
+            <caption>C 2004 года Любим точность во всем:</caption>
+            <tr class="result">
+              <td><span>146<sup>%</sup></span></td>
+              <td><span>100<sup>%</sup></span></td>
+              <td><span>50<sup>%</sup></span></td>
+            </tr>
+            <tr class="indicators">
+              <td>Уровень самоотдачи</td>
+              <td>Соблюдение сроков</td>
+              <td>Минимальная предоплата</td>
+            </tr>
+          </table>
         </aside>
       </section>
       <section class="partners">
@@ -123,7 +130,7 @@
             <p>191186, Санкт-Петербург,
             ул. Б. Конюшенная, д. 19/9</p>
             <a class="address-tel" href="tel:+78122757575">тел: +7 (812) 275-75-75</a>
-            <a class="btn-btn-red" href="#">Напишите нам</a>
+            <a class="btn" href="#">Напишите нам</a>
           </div>
         </div>
       </section>
@@ -137,7 +144,7 @@
       </ul>
       <div class="social-sale">
         <b>Давайте дружить, это выгодно!</b>
-        <p>Скидка 10% для дузей из соуиальных сетей</p>
+        <p>Скидка 10% для друзей из социальных сетей</p>
       </div>  
     </footer>
     <div class="modal" id="window">
