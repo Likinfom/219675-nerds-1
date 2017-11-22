@@ -7,10 +7,10 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
     <header class="main-header">
-      <nav class=" main-navigation">
-        <a href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="https://nerds.ru"></a>
+      <nav class="main-navigation container">
+        <a class="main-header-logo" href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="https://nerds.ru"></a>
         <ul class="site-navigation header-link">
           <li><a href="studio.html">Студия</a></li>
           <li><a href="clients.html">Клиенты</a></li>
@@ -54,16 +54,28 @@
               </fieldset>
               <fieldset class="fieldset">
                 <legend>Особенности</legend>
-                <input type="checkbox" name="slider" id="slider" checked>
-                <label for="slider">Слайдер</label>
-                <input type="checkbox" name="advantage" id="advantage" value="">
-                <label for="advantage">Блок приемуществ</label>
-                <input type="checkbox" name="news" id="news">
-                <label for="news">Новости</label>
-                <input type="checkbox" name="gallery" id="gallery">
-                <label for="gallery">Галерея</label>
-                <input type="checkbox" name="basket" id="basket">
-                <label for="basket">Корзина</label>
+                <ul>
+                  <li class="filter-option">
+                    <input type="checkbox" name="slider" id="slider" checked>
+                    <label for="slider">Слайдер</label>
+                  </li>
+                  <li class="filter-option"></li>
+                    <input type="checkbox" name="advantage" id="advantage" value="">
+                    <label for="advantage">Блок приемуществ</label>
+                  </li>
+                  <li class="filter-option"></li>
+                    <input type="checkbox" name="news" id="news">
+                    <label for="news">Новости</label>
+                  </li>
+                  <li class="filter-option"></li>
+                    <input type="checkbox" name="gallery" id="gallery">
+                    <label for="gallery">Галерея</label>
+                  </li>
+                  <li class="filter-option"></li>
+                    <input type="checkbox" name="basket" id="basket">
+                    <label for="basket">Корзина</label>
+                  </li>
+                </ul>
               </fieldset>
             </ul>
             <button class="btn" type="submit">Показать</button>
@@ -80,14 +92,14 @@
             <li class="sorting-item"><a href="#">По названию</a></li>
           </ul>
           <div class="arrow-sorting">
-            <a class="arrow" href="#" aria-label="По возрастанию">По возрастанию</a>
-            <a class="arrow" href="#" aria-label="По убыванию">По убыванию</a>
+            <a class="arrow-up" href="#" aria-label="По возрастанию"></a>
+            <a class="arrow-down" href="#" aria-label="По убыванию"></a>
           </div>
         </div>
         <div class="catalog-goods">
           <article class="good-item">
             <img src="img/sedona.jpg" width="360" height="576" alt="#">
-            <div class="good-buttons">
+            <div class="good-buttons visually-hidden">
               <h2 class="good-title"><a href="#">Sedona</a></h2>
               <p class="good-description">Информационный сайт для туристов</p>
               <a href="#" class="btn btn-red">9 990 РУБ</a>
@@ -95,7 +107,7 @@
           </article>
           <article class="good-item">
             <img src="img/pink.jpg" width="360" height="576" alt="#">
-            <div class="good-buttons">
+            <div class="good-buttons visually-hidden">
               <h2 class="good-title"><a href="#">Pink-app</a></h2>
               <p class="good-description">Продуктовый лендинг приложения для IOS и Android</p>
               <a href="#" class="btn btn-red">9 990 РУБ</a>
@@ -103,7 +115,7 @@
           </article>
           <article class="good-item">
             <img src="img/barbershop.jpg" width="360" height="576" alt="#">
-            <div class="good-buttons">
+            <div class="good-buttons visually-hidden">
                <h2 class="good-title"><a href="#">Barbershop</a></h2>
                <p class="good-description">Сайт салона красоты. Для мужчин, да</p>
                <a href="#" class="btn btn-red">9 990 РУБ</a>
@@ -111,7 +123,7 @@
           </article>
           <article class="good-item">
             <img src="img/mishka.jpg" width="360" height="576" alt="#">
-            <div class="good-buttons">
+            <div class="good-buttons visually-hidden">
               <h2 class="good-title"><a href="#">Mishka</a></h2>
               <p class="good-description">Интернет-магазин вязанных игрушек</p>
               <a href="#" class="btn btn-red">9 990 РУБ</a>
@@ -119,7 +131,7 @@
           </article>          
           <article class="good-item">
             <img src="img/aplus.jpg" width="360" height="576" alt="#">
-            <div class="good-buttons">
+            <div class="good-buttons visually-hidden">
               <h2 class="good-title"><a href="#">A plus</a></h2>
               <p class="good-description">Лендинг курсов повышения квалификации</p>
               <a href="#" class="btn btn-red">9 990 РУБ</a>
@@ -127,7 +139,7 @@
           </article>
           <article class="good-item">
             <img src="img/kvast.jpg" width="360" height="576" alt="#">
-            <div class="good-buttons">
+            <div class="good-buttons  visually-hidden">
               <h2 class="good-title"><a href="#">Кваст</a></h2>
               <p class="good-description">Промо-сайт производителя крафтового кваса</p>
               <a href="#" class="btn btn-red">9 990 РУБ</a>
@@ -183,10 +195,11 @@
         </p>
         <p>
           <label for="comment-field">Текст письма:</label>
-          <textarea name="comment" id="comment-field">В свободной форме</textarea>
+          <textarea type="text" name="comment" id="comment-field">В свободной форме</textarea>
         </p>
         <button class="btn" type="submit">Отправить</button> 
       </form>
+    </div>
     </div>
   </body>
 </html>
