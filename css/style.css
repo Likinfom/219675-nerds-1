@@ -7,12 +7,6 @@ body {
   font-weight: 400;
 }
 
-.container {
-  width: 1160px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
 a {
   text-decoration: none;
 }
@@ -20,6 +14,37 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.btn {
+  display: inline-block;
+  width: 160px;
+  padding: 13px;
+  margin-top: 25px;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  background:#fb565a;
+  border-radius: 3px;
+ }
+
+ .btn:hover,
+ .btn:focus{
+  background: #e74246;
+}
+  
+.btn:active {
+  background: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 0px 0px inset;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -43,7 +68,6 @@ input[type="radio"].visually-hidden {
 /*Header*/
 
 .main-header {
-  /* Временно для сетки */
   min-height: 114px;
   background-color: #eeeeee;
 }
@@ -53,7 +77,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   font-weight: 700;
   text-transform: uppercase;
- 
   /* Временно для сетки */
   min-height: 114px;
   background-color: transparent;
@@ -65,7 +88,6 @@ input[type="radio"].visually-hidden {
   margin-right:200px;
   padding:0;
   padding-top:50px;
-
 }
 
 .site-navigation,
@@ -83,7 +105,6 @@ input[type="radio"].visually-hidden {
   width: 660px;
   height: 27px;
   padding-top: 77px;
-  background-color: rgba(103, 177, 247, 0.3);
 }
 
 .site-navigation .current {
@@ -116,32 +137,6 @@ input[type="radio"].visually-hidden {
   filter: alpha(Opacity=100);
   opacity: 0.3;
 }
-
-.btn {
-  display: inline-block;
-  width: 160px;
-  padding: 13px;
-  margin-top: 25px;
-  font-size: 16px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #ffffff;
-  text-decoration: none;
-  background:#fb565a;
-  border-radius: 3px;
- }
-
- .btn:hover,
- .btn:focus{
-  background: #e74246;
-}
-  
-.btn:active {
-  background: #d7373b;
-  color: rgba(255, 255, 255, 0.3);
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 0px 0px inset;
-}
-
 
 /*Map-address*/
 .map {
@@ -193,7 +188,6 @@ input[type="radio"].visually-hidden {
 }
 
  /*Footer*/
-
 .main-footer .container {
   display: flex;
   margin-top: 68px;
@@ -263,7 +257,7 @@ input[type="radio"].visually-hidden {
   border: 2px solid #000000;
 }
 
- button {
+button {
   display:inline-block;
   border:none;
 }
@@ -274,8 +268,8 @@ input[type="radio"].visually-hidden {
   position: relative;
   width: 1160px;
   height: 310px;
-  margin:0 auto;
   padding-bottom: 80px;
+  margin-bottom:80px;
 }
 
 .slider-controls {
@@ -314,13 +308,11 @@ li.slide-slide-content {
   text-align: right;
 }
 
-
 .catalog .page-title {
   list-style: none;
   height: 244px;
   background-color: #eeeeee;
 }
-
 
 form .btn,
 .pagination-item a {
@@ -345,31 +337,28 @@ form .btn:active {
  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 0px 0px inset;
 }
 
-
  /*Services*/
 
- .servises h3 {
+.servises h3 {
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
   text-transform:uppercase;
  }
 
- .servise-items {
+.servise-items {
   list-style: none;
   display: flex;
+  justify-content: space-between;
   margin-bottom: 120px;
   padding: 0;
  }
 
- .servise-item {
+.servise-item {
   width: 300px;
   min-height: 346px;
  }
 
- .servise-item:not(:last-child){
-  margin-right:50px;
- }
 
 .btn-apps {
   background:#00ca74;
@@ -399,20 +388,20 @@ form .btn:active {
 
  /*Info*/
 
- .info-content-details {
+.info-content-details {
   display: flex;
   justify-content: space-between;
   margin-bottom: 80px;
   padding: 0;
  }
 
- .info-content {
+.info-content {
    width: 660px;
    margin-right: 140px; 
    min-height: 414px;
  }
 
- .details {
+.details {
   width: 660px;
   min-height: 360px;
  }
@@ -440,7 +429,7 @@ li.order-list {
 
  /*Partners*/
 
- .partners-logo {
+.partners-logo {
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -502,7 +491,6 @@ li.order-list {
   width: 260px;
   min-height: 770px;
   border: 0;
-
 }
 
 .sorting-catalog {
@@ -605,7 +593,7 @@ li.order-list {
 }
 
 .filters-input:disabled + label,
-.ppagination-list a:isabled {
+.pagination-list a:disabled {
   color: #283136;
   opacity: 0.3;
 }
@@ -639,20 +627,15 @@ li.order-list {
 .good-items .actions {
   position: absolute;
   display: block;
+  z-index:10;
   bottom: 0;
   width: 360px;
   height: 230px;
-  
   background-color:#eeeeee;
-  z-index:10;
 }
  .good-title {
   font-size: 18px;
-  text-transform: uppercase;
-    min-height:40px;
-    padding:0 25px;
-    margin-top:10px;
-    margin-bottom:15px;    
+  text-transform: uppercase;   
  }
 
 .good-items .actions{
