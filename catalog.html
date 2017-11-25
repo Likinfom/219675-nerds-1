@@ -14,7 +14,7 @@
         <ul class="site-navigation header-link">
           <li><a href="studio.html">Студия</a></li>
           <li><a href="clients.html">Клиенты</a></li>
-          <li class="main-navigation current">Магазин</li>
+          <li class="current">Магазин</li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <div class="user-block header-link">
@@ -26,11 +26,9 @@
       <section class="catalog page-title">
         <h1 class="page-title">Магазин готовых шаблонов</h1>
       </section>
-      <div class="container">
-      <div class="filters">
-        <section class="filter">
-          <h2 class="visually-hidden">Фильтр товаров</h2>
-          <aside class="left-sidebar">
+      <div class="catalog-columns container">
+          <aside class="filters">
+            <h2 class="visually-hidden">Фильтр товаров</h2>
             <form action="#" method="get">
               <fieldset class="fieldset">
                 <legend>Стоимость</legend>
@@ -84,13 +82,12 @@
               <button class="btn" type="submit">Показать</button>
             </form>
           </aside>
-        </section>
-        <section class="catalog-container">
+        <section class="sorting-catalog">
           <h2 class="visually-hidden">Каталог</h2>
           <div class="sorting">
             <b class="title-items">Сортировать</b>
             <ul class="sorting-items">
-              <li class="sorting-item current"><a href="#">По цене</a></li>
+              <li class="current"><a href="#">По цене</a></li>
               <li class="sorting-item"><a href="#">По типу</a></li>
               <li class="sorting-item"><a href="#">По названию</a></li>
             </ul>
@@ -99,11 +96,11 @@
               <a class="arrow-down" href="#" aria-label="По убыванию"></a>
             </div>
           </div>
-          <div class="catalog-goods">
+
             <div class="good-items">
               <article class="good-item">
                 <img src="img/sedona.jpg" width="360" height="576" alt="#">
-                <div class="good-buttons visually-hidden">
+                <div class="actions">
                   <h2 class="good-title"><a href="#">Sedona</a></h2>
                   <p class="good-description">Информационный сайт для туристов</p>
                   <a href="#" class="btn btn-red">9 990 РУБ</a>
@@ -111,7 +108,7 @@
               </article>
               <article class="good-item">
                 <img src="img/pink.jpg" width="360" height="576" alt="#">
-                <div class="good-buttons visually-hidden">
+                <div class="actions">
                   <h2 class="good-title"><a href="#">Pink-app</a></h2>
                   <p class="good-description">Продуктовый лендинг приложения для IOS и Android</p>
                   <a href="#" class="btn btn-red">9 990 РУБ</a>
@@ -119,7 +116,7 @@
               </article>
               <article class="good-item">
                 <img src="img/barbershop.jpg" width="360" height="576" alt="#">
-                <div class="good-buttons visually-hidden">
+                <div class="actions">
                   <h2 class="good-title"><a href="#">Barbershop</a></h2>
                   <p class="good-description">Сайт салона красоты. Для мужчин, да</p>
                   <a href="#" class="btn btn-red">9 990 РУБ</a>
@@ -127,7 +124,7 @@
               </article>
               <article class="good-item">
                 <img src="img/mishka.jpg" width="360" height="576" alt="#">
-                <div class="good-buttons visually-hidden">
+                <div class="actions">
                   <h2 class="good-title"><a href="#">Mishka</a></h2>
                   <p class="good-description">Интернет-магазин вязанных игрушек</p>
                   <a href="#" class="btn btn-red">9 990 РУБ</a>
@@ -135,7 +132,7 @@
               </article>          
               <article class="good-item">
                 <img src="img/aplus.jpg" width="360" height="576" alt="#">
-                <div class="good-buttons visually-hidden">
+                <div class="actions">
                   <h2 class="good-title"><a href="#">A plus</a></h2>
                   <p class="good-description">Лендинг курсов повышения квалификации</p>
                   <a href="#" class="btn btn-red">9 990 РУБ</a>
@@ -143,7 +140,7 @@
               </article>
               <article class="good-item">
                 <img src="img/kvast.jpg" width="360" height="576" alt="#">
-                <div class="good-buttons  visually-hidden">
+                <div class="actions">
                   <h2 class="good-title"><a href="#">Кваст</a></h2>
                   <p class="good-description">Промо-сайт производителя крафтового кваса</p>
                   <a href="#" class="btn btn-red">9 990 РУБ</a>
@@ -156,9 +153,9 @@
               <li class="pagination-item"><a href="#">3</a></li>
               <li class="pagination-item"><a href="#">Следующая</a></li>
             </ul>
-          </div>
         </section>
-      </div> 
+      </div>
+    </div> 
     </main>
     <footer class="main-footer">
       <section class="map">
@@ -203,11 +200,10 @@
         </p>
         <p>
           <label for="comment-field">Текст письма:</label>
-          <textarea type="text" name="comment" id="comment-field">В свободной форме</textarea>
+          <textarea name="comment" id="comment-field">В свободной форме</textarea>
         </p>
         <button class="btn" type="submit">Отправить</button> 
       </form>
     </div>
-    </div>
-  </body>
+    </body>
 </html>
