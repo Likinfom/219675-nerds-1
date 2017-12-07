@@ -39,11 +39,12 @@ input[type="radio"].visually-hidden {
   display: block;
   padding: 13px 0;
   margin-top: 25px;
+
   font-size: 16px;
-  color: white;
   text-transform: uppercase;
   text-align: center;
-  text-decoration: none;
+  text-decoration: none;  color: white;
+
   background: #fb565a;
   border-radius: 3px;
 }
@@ -59,8 +60,7 @@ input[type="radio"].visually-hidden {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 0px 0px inset;
 }
 
-.btn.disabled,
-.btn:disabled {
+.button .btn:active  {
   cursor: default;
   opacity: 0.5;
   background-color: #e74246;
@@ -121,7 +121,7 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation li.current {
-  padding-bottom: 20px;
+  padding-bottom: 1,0px;
   border-bottom: 2px solid #fb565a;
 }
 
@@ -184,59 +184,69 @@ input[type="radio"].visually-hidden {
 
 .map img {
   width: 100%;
+  min-height: 418px;
   text-align: center;
 
 }
  .map .address {
   position: absolute;
-  top: 54px;
-  left: 7%;
-  width: 319px;
-  height: 308px;
-
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 1200px;;
+  margin: auto;
   text-align: center;
-  background:#ffffff;
+}
+
+.address-container {
+  width: 220px;
+  margin-top: 55px;
+  padding: 46px 52px;
+  text-align: center;
+
+  background-color: #ffffff;
 }
 
 .address-title {
   display: block;
-  margin-top: 49px;
 
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
-
+  
   text-transform:uppercase;
 }
 
 .address p {
-  width:209px;
+  display: block;
+  width: 205px;
   margin-top: 24px;
-  margin-left: 50px;
 
   font-size: 16px;
   line-height: 18px;
   color: #666666;
+
 }
 
 .address-tel {
   display: block;
   margin-bottom: 32px;
-
   color: #666666;
   text-decoration: none;
+  text-align: center;
 }
 
 .address .btn {
-  width: 219px;
+  width: 210px;
   margin: 0 auto;
-  padding: 13px 2px;
 }
 
  /*Footer*/
 .main-footer .container {
   display: flex;
   margin-top: 63px;
+  margin-bottom:70px;
 }
 
 .footer-social {
@@ -315,10 +325,11 @@ input[type="radio"].visually-hidden {
  /*Modal*/
 .modal {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -300px;
-  margin-left: -530px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
   z-index: 100;
 
   box-sizing: border-box;
@@ -387,7 +398,7 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-content p {
-  display: inline-block;
+  display: block;
   width: 360px;
   margin-bottom: 37px;
   color: #000000;
@@ -401,7 +412,7 @@ input[type="radio"].visually-hidden {
 
 .modal input[type="text"],
 .modal input[type="email"],
-.modal textarea[type="text"] {
+.modal textarea {
   box-sizing: border-box;
   padding: 0 13px;
 
@@ -422,11 +433,15 @@ input[type="radio"].visually-hidden {
   border: 2px solid #000000;
 }
 
+modal.width-field {
+  width: 100%;
+}
+
 .modal textarea {
+  box-sizing: border-box;
   width: 100%;
   min-height: 115px;
   margin-right: 0;
-  margin-bottom: 50px;
   resize: none;
   padding-top: 9px;
   padding-bottom: 12px;
@@ -435,12 +450,13 @@ input[type="radio"].visually-hidden {
 }
 
 .modal .btn {
-  display: inherit;
+  display: block;
   height: 50px;
   border: none;
-  padding: 0, 40px;
-  
-  background:#fb565a;
+  padding: 0, 30px;
+  text-align: center;
+  background: #fb565a;
+  color: #ffffff;
 }
 
 /*Slider*/
@@ -549,7 +565,6 @@ input[type="radio"].visually-hidden {
   background-color: #eeeeee;
 }
 
-form .btn,
 .pagination-item a {
   list-style: none;
 
@@ -577,8 +592,8 @@ form .btn:active {
  /*Services*/
 
 .servises h3 {
-  margin-top: 15px;
-  margin-bottom: 20px;
+  margin-top: 25px;
+  margin-bottom: 17px;
 
   font-size: 24px;
   line-height: 30px;
@@ -586,11 +601,29 @@ form .btn:active {
   text-transform:uppercase;
  }
 
+ .sites-item {
+   width: 300px;
+   height: 146px;
+   background-image: url("../img/sites.jpg");
+ }
+
+ .apps-item {
+  width: 300px;
+  height: 146px;
+  background-image: url("../img/apps.jpg");
+}
+
+.presentations-item {
+  width: 300px;
+  height: 146px;
+  background-image: url("../img/presentations.jpg");
+}
+
 .servise-items {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  min-height: 420px;
+  min-height: 430px;
   margin-bottom: 45px;
   padding: 0;
 
@@ -603,7 +636,7 @@ form .btn:active {
  }
 
 .servise-item p {
-   margin-bottom: 30px;
+   margin-bottom: 32px;
  }
 
 .btn {
@@ -641,7 +674,7 @@ form .btn:active {
 .info-content-details {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 52px;
   padding: 0;
  }
 
@@ -659,8 +692,8 @@ form .btn:active {
 .info-content b {
   display:inline-block;
   width: 660px;
-  margin-top: 35px;
-  margin-bottom: 20px;
+  margin-top: 27px;
+  margin-bottom: 18px;
 
   font-size: 45px;
   line-height: 45px;
@@ -678,8 +711,24 @@ form .btn:active {
 }
 
 .details img {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
+
+.partners-logo li:not(:first-child)::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  z-index: 10;
+ 
+  width: 2px;
+  height: 53px;
+
+  margin-top: 65px;
+  margin-left: -20px;
+
+  background-color: #eeeeee;
+}
+
 
 .orders-list {
   position: relative;
@@ -703,6 +752,7 @@ li.order-list::before {
 }
 
 .details caption {
+  margin-top: 16px;
   margin-bottom: 47px;
 }
 
@@ -718,7 +768,6 @@ li.order-list::before {
 .indicators td {
   line-height: 18px;
   padding-top: 15px;
-
 }
 
 .result sup {
@@ -752,40 +801,24 @@ li.order-list::before {
 
 
 .partners-logo a {
-  list-style: none; 
   position: relative;
-  display: inline-block;
-  margin-bottom 0;
-
+  display:inline-block;
+  width:260px;
+  height:180px;
+  margin-top: 2px;
+  margin-right: 36px;
   filter: alpha(Opacity=20);
-  opacity: 0.2;
-}
-  
-li .partner-logo:not(:last-child)::before {
-  content: "";
-  position: absolute;
-  display: block;
-
-  top: 50px;
-  right: -20px;
-
-  width: 2px;
-  height: 52px;
-  background-color: #eeeeee;
-  opacity: 1;
+  opacity: 0.20;
 }
 
-.partners-logo a::after {
-  background-color: #eeeeee;
-  opacity: 1;
+.partners-logo a:last-child {
+margin-right: 0;
 }
-
-.partners-logo a:hover,
-.partners-logo a:focus {
+.partners-logo a:hover {
   filter: alpha(Opacity=100);
   opacity: 1;
 }
-  
+
 .partners-logo a:active {
   filter: alpha(Opacity=100);
   opacity: 0.1;
@@ -1001,7 +1034,6 @@ fieldset .price {
   opacity: 0.4;
 }
 
-
 .filter-input-radio:disabled + label {
   opacity: 0.1;
 }
@@ -1024,7 +1056,6 @@ fieldset .price {
 .filter-input-checkbox + label {
   opacity: 0.4;
 }
-
 
 .filter-input + label {
   opacity: 0.4;
@@ -1053,6 +1084,7 @@ fieldset .price {
 .filter .button {
   width: 100%;
   margin-right: 0;
+  border: none;
 }
 
 .sorting-catalog {
@@ -1095,13 +1127,6 @@ fieldset .price {
   text-transform: uppercase;
 }
 
-.sorting a:focus,
-.sorting a:hover,
-a.arrow-up:focus::after,
-a.arrow-up:hover::after {
-  color: #000000;
-} 
-
 a.arrow {
   display: inline-block;
   margin: 0 10px;
@@ -1129,6 +1154,17 @@ a.arrow {
 .arrow-down::after {
   border-bottom-width: 0;
 }
+
+.sorting a:focus,
+.sorting a:hover,
+.arrow-up:focus::after,
+.arrow-up:hover::after,
+.arrow-down:focus::after,
+.arrow-down:hover::after,
+.sorting-item current,
+a.arrow-down current {
+  color: #000000;
+} 
 
 .filters fieldset {
   border: none;
@@ -1198,7 +1234,7 @@ a.arrow {
 
 .good-items article {
   position: relative;
-  width: 360px;
+  width: 362px;
   margin-bottom: 33px;
   box-sizing: border-box;
 
@@ -1216,17 +1252,23 @@ a.arrow {
   display: block;
   width: 360px;
   height: 575px;
+
   margin-top: 42px;
   margin-bottom: 0px;
+
+  border: 1px solid #eeeeee;
 }
 
 .good-items .actions {
   position: absolute;
   z-index: 10;
-  bottom: 0;
-  width: 360px;
-  height: 230px;
+  bottom: -3px;
+  width: 362px;
+  min-height: 230px;
+  height: auto;
   text-align: center;
+
+
   background-color: #eeeeee;
 }
 
@@ -1245,7 +1287,7 @@ a.arrow {
   color:#000000;   
  }
 
- .good-item p{
+ .good-item p {
   display: inline-block;
   width: 230px;
   margin:0, auto;
@@ -1258,20 +1300,22 @@ a.arrow {
   color:#666666;
  }
 
-.good-item .actions{
+.good-item .actions {
   display: none;
 }
 
-.good-item:hover .actions{
+.good-item:hover .actions {
   display: block;
 }
 
 .actions .btn {
   display: block;
   width: 200px;
-  text-align: center;
+
   margin: auto;
-  
+  margin-bottom:43px;
+
+  text-align: center;
 }
 
 
