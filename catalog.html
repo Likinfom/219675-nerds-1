@@ -17,8 +17,8 @@
           <li class="current">Магазин</li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
-        <div class="user-block header-link">
-          <a class="basket" href="#">Корзина</a>
+        <div class="user-block">
+          <a class="basket-link" href="#">Корзина</a>
         </div>
       </nav>
       <section class="catalog page-title">
@@ -214,24 +214,24 @@
         </div>
       </div>    
     </footer>
-    <div class="modal visually-hidden" id="window">
-      <h2>Напишите нам</h2>
-      <button class="modal-close" type="button">Закрыть</button>
-      <form class="modal-content" method="post">
-        <p>
-          <label for="name-field">Ваше имя</label>
-          <input type="text" id="name-field" value="Представьтесь, пожалуйста">
-        </p>
-        <p>
-          <label for="email-field">Ваш e-mail</label>
-          <input type="email" id="email-field" value="Для отправки ответа">
-        </p>
-        <p>
-          <label for="comment-field">Текст письма:</label>
-          <textarea name="comment" id="comment-field" placeholder="В свободной форме">В свободной форме</textarea>
-        </p>
-        <button class="btn" type="submit">Отправить</button> 
-      </form>
-    </div>
+    <div class="is-hidden modal modal-content" id="window">
+        <h2>Напишите нам</h2>
+        <button class="modal-close" type="button">Закрыть</button>
+        <form class=" modal-content" method="post">
+          <p>
+            <label for="name-field">Ваше имя</label>
+            <input class="text-field" type="text" id="name-field" value="Представьтесь, пожалуйста">
+          </p>
+          <p>
+            <label for="email-field">Ваш e-mail</label>
+            <input class="text-field" type="email" id="email-field" value="Для отправки ответа">
+          </p>
+          <p class="width-field">
+            <label for="comment-field">Текст письма:</label>
+            <textarea  class="text-field width-field" name="comment" id="comment-field" placeholder="В свободной форме">В свободной форме</textarea>
+          </p>
+          <button class="btn" type="submit">Отправить</button> 
+        </form>
+      </div>
     </body>
 </html>
