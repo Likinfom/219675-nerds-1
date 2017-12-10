@@ -208,7 +208,7 @@ opacity: 0.3;
   left: 0;
   right: 0;
 
-  height: 420px;
+  height: 416px;
   min-width: 1200px;
   margin:0 auto;
 
@@ -805,21 +805,6 @@ form .btn:active {
   margin-bottom: 5px;
 }
 
-.partners-logo li:not(:first-child)::before {
-  position: absolute;
-  content: "";
-  display: inline-block;
-  z-index: 10;
- 
-  width: 2px;
-  height: 53px;
-
-  margin-top: 65px;
-  margin-left: -21px;
-
-  background-color: #eeeeee;
-}
-
 .orders-list {
   position: relative;
   padding-left: 36px;
@@ -919,11 +904,27 @@ li.order-list::before {
   opacity: 0.1;
 }
 
-section.page-title {
-  box-sizing: border-box;
+.partners-logo li:not(:first-child)::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  z-index: 10;
+ 
+  width: 2px;
+  height: 53px;
+
+  margin-top: 65px;
+  margin-left: -21px;
+
+  background-color: #eeeeee;
 }
 
  /*Inner-page*/
+
+
+section.page-title {
+  box-sizing: border-box;
+}
 
 .page-title {
   box-sizing:border-box;
