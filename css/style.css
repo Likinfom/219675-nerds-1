@@ -10,6 +10,7 @@ body {
 
 a {
   text-decoration: none;
+  display: block;
 }
   
 img {
@@ -83,7 +84,7 @@ input[type="radio"].visually-hidden {
 .main-navigation {
   list-style: none;
   display: flex;
-  min-height: 114px;
+  max-height: 115px;
 
   font-weight: 700;
   text-transform: uppercase;
@@ -99,9 +100,9 @@ input[type="radio"].visually-hidden {
 .main-header-logo img {
   width: 160px;
   height: 65px;
-  margin-right: 215px;
+  margin-right: 217px;
   padding: 0;
-  padding-top: 50px;
+  padding-top: 35px;
 }
 
 .main-header-logo img:hover {
@@ -125,23 +126,23 @@ opacity: 0.3;
   display: flex;
   flex-wrap: wrap;
   width: 660px;
-  height: 33px;
-  padding-top: 77px;
+  height: 31px;
+  padding-top: 64px;
 }
 
 .site-navigation li.current {
-  padding-bottom: 1,0px;
+  padding-bottom: 1px;
   border-bottom: 2px solid #fb565a;
 }
 
 .user-block  {
   max-width: 165px;
   margin-left: 40px;
-  padding-top: 77px;
+  padding-top: 64px;
 }
 
 .site-navigation li:not(:last-child) {
-  margin-right: 47px;
+  margin-right: 46px;
 }
 
 .site-navigation a,
@@ -184,36 +185,43 @@ opacity: 0.3;
 
 .map {
   position: relative;
-  display: inline-block;
-  width: 100%;
+  display: flex;
+  width: 1200px;
   height: 418px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.map img {
-  width: 100%;
-  min-height: 418px;
-  text-align: center;
-
+.map-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:0 auto;
+  height: 420px;
+  min-width: 1440px;
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
+
  .map .address {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 1200px;;
+  width: 1200px;
   margin: auto;
-  text-align: center;
 }
 
 .address-container {
   width: 220px;
-  margin-top: 55px;
-  margin-left: 21px;
-  padding: 46px 52px;
-  text-align: center;
+  margin-top: 54px;
+  margin-left: 20px;
+  padding: 48px 49px;
+  text-align: left;
 
   background-color: #ffffff;
 }
@@ -223,7 +231,6 @@ opacity: 0.3;
 
   font-size: 18px;
   line-height: 30px;
-  font-weight: bold;
   
   text-transform:uppercase;
 }
@@ -236,35 +243,33 @@ opacity: 0.3;
   font-size: 16px;
   line-height: 18px;
   color: #666666;
-
 }
 
 .address-tel {
-  display: block;
-  margin-bottom: 32px;
+  display: inline-block;
+  margin-bottom: 33px;
   color: #666666;
   text-decoration: none;
   text-align: center;
 }
 
 .address .btn {
-  width: 210px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
 }
 
  /*Footer*/
 .main-footer .container {
   display: flex;
-  margin-top: 63px;
-  margin-bottom:70px;
+  margin-top: 67px;
+  margin-bottom: 59px;
 }
 
 .footer-social {
   width: 260px;
   height: 80px;
-  margin-right: 135px;
+  margin-right: 140px;
 }
-
 
 .footer-social ul {
   list-style: none;
@@ -304,7 +309,7 @@ opacity: 0.3;
 
 .social-button:hover,
 .social-button:focus {
-  background-color: #ff0000;
+  background-color: #e74246;
 }
 
 .social-button:active,
@@ -316,20 +321,25 @@ opacity: 0.3;
 
 .social-sale {
   list-style: none;
-  width: 545px;
+  width: 560px;
   min-height: 80px;
 
   text-align: left;
 }
   
 .social-sale b {
+  display: block;
+  line-height: 22px;
+  margin-top: 6px;
+
   font-size: 36px;
   line-height: 36px;
-  font-weight: bold;
+  font-weight: 600;
 }
   
 .social-sale p {
-  line-height: 22px;
+  display: block;
+  margin-top: 9px;
 }
 
  /*Modal*/
@@ -390,7 +400,7 @@ opacity: 0.3;
 
 .modal h2 {
   margin-top: 0;
-  margin-bottom: 13px;
+  margin-bottom: 42px;
   height: 36px;
 
   font-size: 45px;
@@ -498,7 +508,6 @@ textarea[placeholder] {
 
 .slider ul {
   padding: 0px;
-  padding-top: 54px;
 }
 
 .slides li {
@@ -576,10 +585,18 @@ textarea[placeholder] {
   padding: 78 0 80 0;
 }
 
-.slide-slide-content b {
+li.slide-content.current{
+  display: flex;
+  justify-content: space-between;
+}
+li.slide-content {
+  display: none;
+}
+
+.slide-content b {
   display: block;
   max-width: 540px;
-  margin: 0;
+  margin-top: 55px;
   margin-bottom: 27px;
 
   font-size: 55px;
@@ -587,16 +604,10 @@ textarea[placeholder] {
   font-weight: 500;
 }
 
-.slide-slide-content p {
+.slide-content p {
   width: 430px;
   margin-top: 25px;
-  margin-bottom: 40px;
-}
-
-.slider img {
-  position: absolute;
-  left: 35%;
-  bottom: 0%;
+  margin-bottom: 38px;
 }
 
 .slider-item {
@@ -605,16 +616,10 @@ textarea[placeholder] {
 }
 
  .slides a {
-  width: 214px;
+  width: 240px;
  }
 
-.catalog .page-title {
-  list-style: none;
-  height: 244px;
-  background-color: #eeeeee;
-}
-
-.pagination-item a {
+ .pagination-item a {
   list-style: none;
 
   color: #000000;
@@ -672,11 +677,11 @@ form .btn:active {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  min-height: 430px;
-  margin-bottom: 45px;
+  min-height: 427px;
+  margin-bottom: 40px;
   padding: 0;
 
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 2px solid #eeeeee;
  }
 
 .servise-item {
@@ -685,7 +690,9 @@ form .btn:active {
  }
 
 .servise-item p {
-   margin-bottom: 32px;
+  display: block;
+  width: 260px;
+  margin-bottom: 31px;
  }
 
 .btn {
@@ -723,7 +730,7 @@ form .btn:active {
 .info-content-details {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 52px;
+  margin-bottom: 48px;
   padding: 0;
  }
 
@@ -741,7 +748,7 @@ form .btn:active {
 .info-content b {
   display:inline-block;
   width: 660px;
-  margin-top: 27px;
+  margin-top: 34px;
   margin-bottom: 18px;
 
   font-size: 45px;
@@ -752,8 +759,8 @@ form .btn:active {
 .info-results caption {
   display: inline-block;
   width:360px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 22px;
+  margin-bottom: 9px;
 
   font-weight: bold;
   text-transform: uppercase;
@@ -773,19 +780,19 @@ form .btn:active {
   height: 53px;
 
   margin-top: 65px;
-  margin-left: -20px;
+  margin-left: -21px;
 
   background-color: #eeeeee;
 }
 
-
 .orders-list {
   position: relative;
+  padding-left: 36px;
 }
 
 li.order-list {
   list-style: none;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 }
 
 li.order-list::before {
@@ -797,11 +804,10 @@ li.order-list::before {
   height: 2px;
 
   background-color: #fb565a;
-  margin: 10px 10px 4px -39px;
+  margin: 10px 10px 4px -35px;
 }
 
 .details caption {
-  margin-top: 16px;
   margin-bottom: 47px;
 }
 
@@ -809,18 +815,18 @@ li.order-list::before {
 .indicators td {
   list-style: none;
   display: inline-block;
-  width: 110px; 
+  width: 115px; 
 
   text-align: left;
 }
 
 .indicators td {
   line-height: 18px;
-  padding-top: 15px;
+  padding-top: 18px;
 }
 
 .result sup {
-  font-size: 25px;
+  font-size: 26px;
 }
 
 .result span {
@@ -835,26 +841,25 @@ li.order-list::before {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 75px;
+  margin-bottom: 80px;
   margin-top:0;
   padding: 0;
 
-  border-top: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  min-height: 180px; 
+  border-top: 2px solid #eeeeee;
+  border-bottom: 2px solid #eeeeee;
+  height: 180px; 
  }
 
 .partners-logo li {
-  list-style: none; 
+  list-style: none;
 }
-
 
 .partners-logo a {
   position: relative;
   display:inline-block;
+  box-sizing: border-box;
   width:260px;
   height:180px;
-  margin-top: 2px;
   margin-right: 36px;
   filter: alpha(Opacity=20);
   opacity: 0.20;
@@ -882,14 +887,14 @@ section.page-title {
 .page-title {
   box-sizing:border-box;
   margin: 0 auto;
-  margin-bottom: 53px;
+  margin-bottom: 55px;
   padding: 0;
 
   font-size: 55px;
   line-height: 55px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 53px;
+
 }
 
 .catalog-columns {
@@ -900,8 +905,8 @@ section.page-title {
 
 .catalog .page-title {
   list-style: none;
-  height: 235px;
-  padding-top: 70px;
+  height: 234px;
+  padding-top: 71px;
 
   background-color: #eeeeee;
 }
@@ -913,13 +918,14 @@ section.page-title {
   width: 260px;
   min-height: 770px;
   padding: 0;
-
   border: 0;
 }
 
 .filters fieldset {
+  margin: 0;
   padding:0;
 }
+
 fieldset .price {
   font-size: 18px;
   line-height: 24px;
@@ -930,7 +936,7 @@ fieldset .price {
 .range-filter {
   width: 260px;
   margin-top: 49px;
-  margin-bottom: 56px;
+  margin-bottom: 53px;
 }
 
 .filter-item legend {
@@ -945,7 +951,7 @@ fieldset .price {
   
   height: 41px;
   margin-bottom: 15px;
-  padding-top: 39px;
+  padding-top: 38px;
   padding-right: 20px;
   padding-left: 20px;
   
@@ -969,7 +975,7 @@ fieldset .price {
 
 .range-controls .toggle {
   position: absolute;
-  top: 31px;
+  top: 29px;
   left: 0;
   
   width: 4px;
@@ -1004,9 +1010,10 @@ fieldset .price {
 }
 
 .price-controls input {
+  list-style: none;
   width: 60px;
-  padding: 8px 10px;
-  margin-left: 10px;
+  padding: 10px 10px;
+  margin-left: 8px;
   
   font-family: Roboto, Arial, sans-serif;
   font-size: 16px;
@@ -1015,7 +1022,7 @@ fieldset .price {
   
   border: none;
   border-radius: 5px;
-  background: #f1f1f1;
+  background: #eeeeee;
 }
 
 .max-price {
@@ -1032,6 +1039,23 @@ fieldset .price {
   
   list-style: none;
   line-height: 18px;
+}
+
+.filters legend {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+
+  text-transform:uppercase;
+}
+
+.filters ul {
+  list-style: none;
+  margin-top: 12px;
+  margin-bottom: 39px;
+  line-height: 30px;
+  
+  color: #283136;
 }
 
 .filter-option {
@@ -1091,7 +1115,7 @@ fieldset .price {
   content: "";
   position: absolute;
   left: -20px;
-  top: 0;
+  top: 2px;
 
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
@@ -1111,10 +1135,10 @@ fieldset .price {
 }
 
 .filter-input-checkbox:checked + label::before{
-  content: "";
+  content:"";
   position: absolute;
   left: -20px;
-  top: 0;
+  top: 2px;
 
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
@@ -1130,9 +1154,16 @@ fieldset .price {
   opacity: 1;
 }
 
-.filter button {
+button.btn {
+  list-style: none;
+  display: block;
   width: 100%;
-  margin-right: 0;
+  height: 50px;
+  margin-top: 4px;
+  
+  font-weight: 500;
+
+  color: #000000;
   background: #eeeeee;
 }
 
@@ -1147,7 +1178,7 @@ fieldset .price {
   display: flex;
   width: 100%;
   min-height: 18px;
-  margin-bottom: 47px;
+  margin-bottom: 49px;
 }
 
 .sorting-items {
@@ -1158,38 +1189,68 @@ fieldset .price {
 
   margin: 0;
   padding: 0;
-  margin-right: 29px;
+  margin-right: 48px;
 }
 
 .sorting b {
   font-size: 18px;
   text-transform: uppercase;
-  margin-right: 270px;
+  margin-right: 266px;
+}
+
+.sorting a.current {
+  color: #000000;
 }
 
 .sorting a {
   list-style: none;
   display: block;
-  color: #a6a6a6;
-  font-size: 14px;
+  padding-top: 2px;
 
+  font-size: 14px;
   text-transform: uppercase;
+
+  color: #a6a6a6;
+}
+
+.sorting-arrows {
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.sorting-controls a.current {
+  content: "";
+  display: inline-block;
+
+  border: 10px solid #000000;
+  border-right-width: 6px;
+  border-left-width: 6px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+
+  vertical-align: center;
 }
 
 a.arrow {
   display: inline-block;
+  font-size: 0;
+  padding-top: 6px;
+}
+
+a.arrow current::after {
+  display: inline-block;
+  border: 10px solid #000000;
   margin: 0 10px;
   font-size: 0;
   padding-top: 5px;
 }
-
 .arrow::after {
   content: "";
   display: inline-block;
 
   border: 10px solid #a6a6a6;
-  border-right-width: 5px;
-  border-left-width: 5px;
+  border-right-width: 6px;
+  border-left-width: 6px;
   border-right-color: transparent;
   border-left-color: transparent;
 
@@ -1198,6 +1259,7 @@ a.arrow {
 
 .arrow-up::after {
   border-top-width: 0;
+  margin-left: 15px;
 }
 
 .arrow-down::after {
@@ -1205,32 +1267,12 @@ a.arrow {
 }
 
 .sorting a:focus,
-.sorting a:hover,
-.arrow-up:focus::after,
-.arrow-up:hover::after,
-.arrow-down:focus::after,
-.arrow-down:hover::after,
-.sorting-item current,
-a.arrow-down current {
+.sorting a:hover {
   color: #000000;
 } 
 
 .filters fieldset {
   border: none;
-}
-
-.filters legend {
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: bold;
-
-  text-transform:uppercase;
-}
-
-.filters ul {
-  list-style: none;
-  line-height: 30px;
-  color: #283136;
 }
 
  /*Catalog*/
@@ -1242,7 +1284,7 @@ a.arrow-down current {
   flex-wrap: wrap;
   width: 760px;
   padding: 0;
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 }
 
 .catalog-goods {
@@ -1284,7 +1326,9 @@ a.arrow-down current {
 .good-items article {
   position: relative;
   width: 362px;
-  margin-bottom: 33px;
+  height: 616px;
+  padding-top: 41px;
+  margin-bottom: 36px;
   box-sizing: border-box;
 
   vertical-align: top;
@@ -1293,22 +1337,61 @@ a.arrow-down current {
   border-radius: 3px;
 }
 
+span.decoration-circle {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50px;
+  left: 38px;
+  top: 12px;
+  background-color: #ffffff;
+}
+
+span.decoration-circle:after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50px;
+  left: -23px;
+  background-color: #ffffff;
+}
+
+span.decoration-circle:before{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50px;
+  left: 23px;
+  background-color: #ffffff;
+}
+
+.good-item:hover img {
+  border: none
+}
+
 .good-items article:hover {
   background-color: #4d4d4d;
+  border: 1px solid #4d4d4d23;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .good-items img {
   display: block;
   width: 360px;
-  height: 575px;
-
-  margin-top: 42px;
-  margin-bottom: 0px;
+  height: 576px;
 
   border: 1px solid #eeeeee;
+  border-top: none;
 }
 
-.good-items .actions {
+.good-items img:hover {
+  border: 1px solid #eeeeee;
+  border-color: transparent;
+}
+
+.good-item .actions {
   position: absolute;
   z-index: 10;
   bottom: -3px;
@@ -1367,7 +1450,6 @@ a.arrow-down current {
   text-align: center;
 }
 
-
  /*Pagination*/
 
 .pagination-list {
@@ -1386,13 +1468,14 @@ a.arrow-down current {
 
 .pagination-item a {
   display: block;
-  padding: 12px 20px;
+  padding: 13px 20px;
 
   border-radius: 3px;
   background-color: #eeeeee;
 
   font-weight: 500;
   color: #000000;
+  font-size: 16px;
   text-align: center;
 }
 
@@ -1400,15 +1483,22 @@ a.arrow-down current {
   width: 260px;
 }
 
-li.pagination-item-current {
+.pagination-item a.current {
   list-style: none;
-
+  display: block;
+  list-style: none;
+  padding: 11px 18px;
   border: 2px solid #dbdbdb;
   border-radius: 3px;
   background-color: #ffffff;
 }
 
-
+.pagination-item a:active {
+  background: #d5d5d5;
+  color: #000000;
+  opacity: 0.3;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 0px 0px inset;
+}
 
 
 

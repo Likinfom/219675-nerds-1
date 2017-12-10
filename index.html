@@ -35,19 +35,21 @@
               <label class="slider-controls-item slider-controls-item--3" for="btn-3"></label>
             </div>
             <ul class="slides">
-              <li class="slide-slide-content current">
-                <b class="slide-title">Долго, дорого,<br>скрупулезно</b>
-                <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
-                <a class="btn" href="#">Узнать больше</a>
+                <li class="slide-content current">
+                  <div class="slide-info">
+                    <b class="slide-title">Долго, дорого,<br>скрупулезно.</b>
+                    <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
+                    <a class="btn" href="#">Узнать больше</a>
+                  </div>
                 <img src="img/slide1.png" width="760" height="430" alt="desktop">
-              </li>
-              <li class="slide-slide-content visually-hidden">
+                </li>
+              <li class="slide-content">
                 <b class="slide-title">Любим математику как никто другой</b>
                 <p>Никакого креатива. Только математические формулы для расчета идеальных пропорций.</p>
                 <a class="btn" href="#">Узнать больше</a>
                 <img src="img/slide2.png" width="760" height="430" alt="desktop">
               </li>
-              <li class="slide-slide-content visually-hidden">
+              <li class="slide-content">
                 <b class="slide-title">Только ночь,<br> только хардкор</b>
                 <p>Работать днем как все? Мы против этого.<br> Ближе к полуночи работат только начинается.</p>
                 <a class="btn" href="#">Узнать больше</a>
@@ -117,7 +119,7 @@
         <h2 class="visually-hidden">Партнеры</h2>     
         <ul class="partners-logo">
           <li class="partner-html-academy">
-            <a href="#"><img src="img/html-logo.png" width="260" height="180" alt="HTML академия"></a>
+            <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/html-logo.png" width="260" height="180" alt="HTML академия"></a>
           </li>
           <li class="partner-borodinsky">
             <a href="#"><img src="img/borodinski-logo.png" width="260" height="180" alt="Бородинский"></a>
@@ -133,8 +135,9 @@
     </main>
     <footer class="main-footer">
       <section class="map">
-        <h4 class="visually-hidden">Карта</h4>
-        <img src="img/map.jpg" width="1140" height="420" alt="map">
+        <div class="map-container">
+          <h4 class="visually-hidden">Карта</h4>
+        </div>
         <div class="address">
           <div class="address-container">
             <span class="address-title">NЁRDS DESIGN STUDIO</span>
@@ -161,9 +164,9 @@
               <a class="social-button" href="#" aria-label="Фейсбук">
                 <span class="visually-hidden">Фейсбук</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="22" viewBox="0 0 10.15 21.74">
-                  <path d="M3.34 1.12A4.77 4.77 0 0 1 6.53 0h3.61v3.81H7.81a1.07 1.07 0 0 0-1.09.83v2.55h3.42c-.08 1.23-.24 2.45-.41 3.67h-3v10.87H2.21V10.86H0V7.21h2.19V3.66a3.83 3.83 0 0 1 1.15-2.54z" fill="#ffffff"/>
-                  </path>
-              </svg>
+                  <path d="M3.34 1.12A4.77 4.77 0 0 1 6.53 0h3.61v3.81H7.81a1.07 1.07 0 0 0-1.09.83v2.55h3.42c-.08 1.23-.24 2.45-.41 3.67h-3v10.87H2.21V10.86H0V7.21h2.19V3.66a3.83 3.83 0 0 1 1.15-2.54z" fill="#ffffff">
+                </path>
+                </svg>
               </a>
             </li>
             <li>
@@ -188,11 +191,11 @@
         <button class="modal-close" type="button">Закрыть</button>
         <form class=" modal-content" method="post">
           <p>
-            <label for="name-field">Ваше имя</label>
+            <label for="name-field">Ваше имя:</label>
             <input class="text-field" type="text" id="name-field" value="Представьтесь, пожалуйста">
           </p>
           <p>
-            <label for="email-field">Ваш e-mail</label>
+            <label for="email-field">Ваш e-mail:</label>
             <input class="text-field" type="email" id="email-field" value="Для отправки ответа">
           </p>
           <p class="width-field">

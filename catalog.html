@@ -31,7 +31,7 @@
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <form action="#" method="get">
             <fieldset class="fieldset">
-              <legend>Стоимость</legend>
+              <legend>Стоимость:</legend>
                 <div class="range-filter">
                   <div class="range-controls">
                     <div class="scale">
@@ -47,7 +47,7 @@
                 </div>
               </fieldset>
               <fieldset class="fieldset">
-                <legend>Сетка</legend>
+                <legend class="grid">Сетка:</legend>
                 <ul>
                   <li class="filter-option">
                     <input  class="visually-hidden filter-input filter-input-radio checked" type="radio" name="grid" id="adaptive" value="Адаптивная">
@@ -64,7 +64,7 @@
                 </ul>
                 </fieldset>
                 <fieldset class="fieldset">
-                  <legend>Особенности</legend>
+                  <legend>Особенности:</legend>
                   <ul>
                     <li class="filter-option">
                       <input class="visually-hidden filter-input filter-input-checkbox checked" type="checkbox" name="slider" id="slider" checked>
@@ -72,7 +72,7 @@
                     </li>
                     <li class="filter-option">
                       <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="advantage" id="advantage" value="">
-                      <label for="advantage">Блок приемуществ</label>
+                      <label for="advantage">Блок преимуществ</label>
                     </li>
                     <li class="filter-option">
                       <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="news" id="news">
@@ -94,17 +94,20 @@
         <section class="sorting-catalog">
           <h2 class="visually-hidden">Каталог</h2>
           <div class="sorting">
-            <b class="title-items">Сортировать</b>
+            <b class="title-items">Сортировать:</b>
             <ul class="sorting-items">
-              <li class="sorting-item current"><a href="#">По цене</a></li>
+              <li class="sorting-item current"><a class="current" href="#">По цене</a></li>
               <li class="sorting-item"><a href="#">По типу</a></li>
               <li class="sorting-item"><a href="#">По названию</a></li>
             </ul>
-            <a class="arrow arrow-down current" href="#" aria-label="По убыванию"></a>
-            <a class="arrow arrow-up" href="#" aria-label="По возрастанию"></a>
+            <div class="sorting-arrows">
+              <a class="arrow arrow-down current" href="#" aria-label="По убыванию"></a>
+              <a class="arrow arrow-up" href="#" aria-label="По возрастанию"></a>
+            </div>
           </div>
             <div class="good-items">
               <article class="good-item">
+                <span class="decoration-circle"></span>
                 <img src="img/sedona.jpg" width="360" height="576" alt="#">
                 <div class="actions">
                   <h2 class="good-title"><a href="#">Sedona</a></h2>
@@ -113,6 +116,7 @@
                 </div>
               </article>
               <article class="good-item">
+                <span class="decoration-circle"></span>
                 <img src="img/pink.jpg" width="360" height="576" alt="#">
                 <div class="actions">
                   <h2 class="good-title"><a href="#">Pink-app</a></h2>
@@ -121,6 +125,7 @@
                 </div>
               </article>
               <article class="good-item">
+                <span class="decoration-circle"></span>
                 <img src="img/barbershop.jpg" width="360" height="576" alt="#">
                 <div class="actions">
                   <h2 class="good-title"><a href="#">Barbershop</a></h2>
@@ -129,6 +134,7 @@
                 </div>
               </article>
               <article class="good-item">
+                <span class="decoration-circle"></span>
                 <img src="img/mishka.jpg" width="360" height="576" alt="#">
                 <div class="actions">
                   <h2 class="good-title"><a href="#">Mishka</a></h2>
@@ -137,6 +143,7 @@
                 </div>
               </article>          
               <article class="good-item">
+                <span class="decoration-circle"></span>
                 <img src="img/aplus.jpg" width="360" height="576" alt="#">
                 <div class="actions">
                   <h2 class="good-title"><a href="#">A plus</a></h2>
@@ -145,6 +152,7 @@
                 </div>
               </article>
               <article class="good-item">
+                <span class="decoration-circle"></span>
                 <img src="img/kvast.jpg" width="360" height="576" alt="#">
                 <div class="actions">
                   <h2 class="good-title"><a href="#">Кваст</a></h2>
@@ -154,7 +162,7 @@
               </article>
             </div>
             <ul class="pagination-list">
-              <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
+              <li class="pagination-item"><a class="current" href="#">1</a></li>
               <li class="pagination-item"><a>2</a></li>
               <li class="pagination-item"><a href="#">3</a></li>
               <li class="pagination-item next"><a href="#">Следующая</a></li>
@@ -192,7 +200,7 @@
                   <a class="social-button" href="#" aria-label="facebook">
                     <span class="visually-hidden">Facebook</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="22" viewBox="0 0 10.15 21.74">
-                      <path d="M3.34 1.12A4.77 4.77 0 0 1 6.53 0h3.61v3.81H7.81a1.07 1.07 0 0 0-1.09.83v2.55h3.42c-.08 1.23-.24 2.45-.41 3.67h-3v10.87H2.21V10.86H0V7.21h2.19V3.66a3.83 3.83 0 0 1 1.15-2.54z" fill="#ffffff"/>
+                      <path d="M3.34 1.12A4.77 4.77 0 0 1 6.53 0h3.61v3.81H7.81a1.07 1.07 0 0 0-1.09.83v2.55h3.42c-.08 1.23-.24 2.45-.41 3.67h-3v10.87H2.21V10.86H0V7.21h2.19V3.66a3.83 3.83 0 0 1 1.15-2.54z" fill="#ffffff">
                       </path>
                     </svg> 
                   </a>
