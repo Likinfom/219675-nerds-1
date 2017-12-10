@@ -521,7 +521,7 @@ textarea[placeholder] {
 .slider {
   position: relative;
   min-height: 410px;
-  margin-bottom: 80px;
+  margin-bottom: 78px;
 
   background-color: #eeeeee;
 }
@@ -538,7 +538,7 @@ textarea[placeholder] {
 .slider-controls {
   position: absolute;
   left: 50%;
-  bottom: 104px;
+  bottom: 106px;
   z-index: 100;
   
   width: 160px;
@@ -626,8 +626,12 @@ li.slide-content {
 }
 
 .slide-content img {
-  margin-top:
-  -23px;
+  position: relative;
+  left:-33px;
+  margin-top:-23px;
+
+  display:block;
+
 }
 
 .slide-content p {
@@ -707,7 +711,6 @@ form .btn:active {
   list-style: none;
 
   display: flex;
-  justify-content: space-between;
   min-height: 427px;
   margin-bottom: 40px;
   padding: 0;
@@ -718,6 +721,7 @@ form .btn:active {
 .servise-item {
   width: 300px;
   min-height: 346px;
+  margin-right: 100px;
  }
 
 .servise-item p {
@@ -942,8 +946,8 @@ section.page-title {
 .catalog .page-title {
   list-style: none;
 
-  height: 234px;
-  padding-top: 71px;
+  height: 235px;
+  padding-top: 72px;
 
   background-color: #eeeeee;
 }
@@ -1221,7 +1225,7 @@ button.btn {
   display: flex;
   width: 100%;
   min-height: 18px;
-  margin-bottom: 46px;
+  margin-bottom: 43px;
 }
 
 .sorting-items {
@@ -1259,6 +1263,7 @@ button.btn {
 .sorting-arrows {
   display:flex;
   flex-wrap: wrap;
+  padding-top: 2px;
 }
 
 .sorting-controls a.current {
@@ -1271,7 +1276,7 @@ button.btn {
   border-right-color: transparent;
   border-left-color: transparent;
 
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 a.arrow {
@@ -1283,11 +1288,7 @@ a.arrow {
 .sorting a.current.arrow-down::after {
   padding-top: 5px;
 
-  border: 10px solid #000000;
-  border-right-width: 6px;
-  border-left-width: 6px;
-  border-bottom-width: 0;
-  font-size: 0;
+  border-top-color:#000000;
 }
 
 .arrow::after {
@@ -1331,7 +1332,7 @@ a.arrow {
   flex-wrap: wrap;
   width: 760px;
   padding: 0;
-  margin-bottom: 26px;
+  margin-bottom: 27px;
 }
 
 .catalog-goods {
@@ -1372,7 +1373,7 @@ a.arrow {
 
 .good-items article {
   position: relative;
-  width: 362px;
+  width: 360px;
   height: 614px;
   padding-top: 40px;
   margin-bottom: 35px;
@@ -1389,8 +1390,8 @@ a.arrow {
 
 span.decoration-circle {
   position: absolute;
-  left: 38px;
-  top: 12px;
+  left: 39px;
+  top: 13px;
 
   width: 14px;
   height: 14px;
