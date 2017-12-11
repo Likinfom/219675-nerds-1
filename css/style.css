@@ -5,7 +5,7 @@ body {
  
   font-family: "Roboto", Verdana, sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 30px;
   font-weight: 400;
 }
 
@@ -41,7 +41,7 @@ input[type="radio"].visually-hidden {
 .btn {
   display: block;
   margin-top: 25px;
-  padding: 13px 0;
+  padding: 10px 0;
 
   font-size: 16px;
   text-transform: uppercase;
@@ -66,7 +66,7 @@ input[type="radio"].visually-hidden {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 0px 0px inset;
 }
 
-.button .btn:active  {
+.button .btn:active {
   cursor: default;
 
   background-color: #e74246;
@@ -92,7 +92,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   max-height: 115px;
 
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
 
   background-color: transparent;
@@ -136,7 +136,7 @@ opacity: 0.3;
 }
 
 .site-navigation li.current {
-  padding-bottom: 1px;
+  padding-bottom: 32px;
 
   border-bottom: 2px solid #fb565a;
 }
@@ -178,7 +178,7 @@ opacity: 0.3;
   content: "";
 
   position: absolute;
-  top: 4px;
+  top: 6px;
   left: 9px;
 
   width: 16px;
@@ -257,7 +257,7 @@ opacity: 0.3;
 
 .address-tel {
   display: inline-block;
-  margin-bottom: 33px;
+  margin-bottom: 28px;
 
   color: #666666;
   text-decoration: none;
@@ -266,6 +266,7 @@ opacity: 0.3;
 
 .address .btn {
   width: 100%;
+  padding: 10px 0;
   margin: 0;
 }
 
@@ -354,7 +355,7 @@ opacity: 0.3;
   
 .social-sale p {
   display: block;
-  margin-top: 9px;
+  margin-top: 7px;
 }
 
  /*Modal*/
@@ -521,7 +522,7 @@ textarea[placeholder] {
 .slider {
   position: relative;
   min-height: 410px;
-  margin-bottom: 78px;
+  margin-bottom: 76px;
 
   background-color: #eeeeee;
 }
@@ -538,7 +539,7 @@ textarea[placeholder] {
 .slider-controls {
   position: absolute;
   left: 50%;
-  bottom: 106px;
+  bottom: 108px;
   z-index: 100;
   
   width: 160px;
@@ -617,8 +618,8 @@ li.slide-content {
 .slide-content b {
   display: block;
   max-width: 540px;
-  margin-top: 55px;
-  margin-bottom: 27px;
+  margin-top: 52px;
+  margin-bottom: 26px;
 
   font-size: 55px;
   line-height: 55px;
@@ -636,8 +637,9 @@ li.slide-content {
 
 .slide-content p {
   width: 430px;
-  margin-top: 25px;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
+
+  line-height: 24px;
 }
 
 .slider-item {
@@ -728,6 +730,8 @@ form .btn:active {
   display: block;
   width: 260px;
   margin-bottom: 31px;
+
+  line-height: 24px;
 }
 
 .btn {
@@ -765,7 +769,7 @@ form .btn:active {
 .info-content-details {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 48px;
+  margin-bottom: 51px;
   padding: 0;
 }
 
@@ -790,19 +794,23 @@ form .btn:active {
   line-height: 45px;
 }
 
+.info-content p {
+  list-style: none;
+
+  margin-bottom: 13px;
+
+  line-height: 24px;
+}
+
 .info-content span,
 .info-results caption {
   display: inline-block;
   width:360px;
   margin-top: 22px;
-  margin-bottom: 9px;
+  margin-bottom: 3px;
 
   font-weight: bold;
   text-transform: uppercase;
-}
-
-.details img {
-  margin-bottom: 5px;
 }
 
 .orders-list {
@@ -812,7 +820,7 @@ form .btn:active {
 
 li.order-list {
   list-style: none;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 li.order-list::before {
@@ -823,13 +831,13 @@ li.order-list::before {
   vertical-align: center;
   width: 25px;
   height: 2px;
-  margin: 10px 10px 4px -35px;
+  margin: 12px 10px 4px -35px;
 
   background-color: #fb565a;
 }
 
 .details caption {
-  margin-bottom: 47px;
+  margin-bottom: 41px;
 }
 
 .result td,
@@ -844,7 +852,7 @@ li.order-list::before {
 
 .indicators td {
   line-height: 18px;
-  padding-top: 18px;
+  padding-top: 13px;
 }
 
 .result sup {
@@ -928,7 +936,7 @@ section.page-title {
 .page-title {
   box-sizing:border-box;
   margin: 0 auto;
-  margin-bottom: 55px;
+  margin-bottom: 53px;
   padding: 0;
 
   font-size: 55px;
@@ -946,8 +954,8 @@ section.page-title {
 .catalog .page-title {
   list-style: none;
 
-  height: 235px;
-  padding-top: 72px;
+  height: 233px;
+  padding-top: 70px;
 
   background-color: #eeeeee;
 }
@@ -1057,7 +1065,7 @@ fieldset .price {
   padding: 10px 10px;
   margin-left: 8px;
   
-  font-family: Roboto, Arial, sans-serif;
+  font-family: "Roboto", Verdana, sans-serif;
   font-size: 16px;
   text-align: center;
   color: #283136;
@@ -1086,7 +1094,8 @@ fieldset .price {
 .filters legend {
   font-size: 18px;
   line-height: 30px;
-  font-weight: bold;
+  font-weight: 700;
+
 
   text-transform:uppercase;
 }
@@ -1147,10 +1156,6 @@ fieldset .price {
   opacity: 1;
 }
 
-.filter-input-radio + label {
-  opacity: 0.4;
-}
-
 .filter-input-radio:disabled + label {
   opacity: 0.1;
 }
@@ -1168,14 +1173,6 @@ fieldset .price {
   background-repeat: no-repeat;
   background-position: 0 0;
 
-  opacity: 0.4;
-}
-
-.filter-input-checkbox + label {
-  opacity: 0.4;
-}
-
-.filter-input + label {
   opacity: 0.4;
 }
 
@@ -1208,7 +1205,7 @@ button.btn {
   height: 50px;
   margin-top: 4px;
   
-  font-weight: 500;
+  font-weight: 600;
   color: #000000;
 
   background: #eeeeee;
@@ -1513,7 +1510,7 @@ span.decoration-circle:before{
 
 .pagination-item a {
   display: block;
-  padding: 13px 20px;
+  padding: 10px 20px;
 
   font-weight: 500;
   color: #000000;
@@ -1532,7 +1529,7 @@ span.decoration-circle:before{
   list-style: none;
 
   display: block;
-  padding: 11px 18px;
+  padding: 8px 18px;
 
   background-color: #ffffff;
   border: 2px solid #dbdbdb;
