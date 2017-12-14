@@ -182,7 +182,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   max-height: 115px;
   margin-bottom: 17px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
 
   background-color: transparent;
@@ -471,7 +471,7 @@ input[type="radio"].visually-hidden {
 
   font-size: 36px;
   line-height: 36px;
-  font-weight: 600;
+  font-weight: 700;
 }
     
 .social-sale p {
@@ -1376,7 +1376,7 @@ button.btn {
   height: 50px;
   margin-top: 9px;
     
-  font-weight: 600;
+  font-weight: 500;
   color: #000000;
 
   background: #eeeeee;
